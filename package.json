@@ -1,0 +1,26 @@
+{
+  "name": "node-server-for-react",
+  "version": "0.0.1",
+  "description": "A node server for react application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anshulsahni/NodeServerForReact.git"
+  },
+  "keywords": [
+    "Node",
+    "server",
+    "react",
+    "http",
+    "web"
+  ],
+  "author": "Anshul Sahni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anshulsahni/NodeServerForReact/issues"
+  },
+  "homepage": "https://github.com/anshulsahni/NodeServerForReact#readme"
+}
