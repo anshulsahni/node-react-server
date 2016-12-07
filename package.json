@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/anshulsahni/NodeServerForReact/issues"
   },
-  "homepage": "https://github.com/anshulsahni/NodeServerForReact#readme"
+  "homepage": "https://github.com/anshulsahni/NodeServerForReact#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "portfinder": "^1.0.10",
+    "yargs": "^6.5.0"
+  }
 }
