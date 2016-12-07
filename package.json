@@ -25,7 +25,6 @@
   "homepage": "https://github.com/anshulsahni/NodeServerForReact#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "moment": "^2.17.1",
     "portfinder": "^1.0.10",
     "yargs": "^6.5.0"
   }
