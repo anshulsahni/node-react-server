@@ -24,7 +24,6 @@ module.exports = function(options) {
   // method to check if port is already in use
   portfinder.basePort = PORT;
   portfinder.getPort(function(error, assignedPort) {
-    console.log('ansh');
     if (assignedPort !== PORT) {
       log('ERROR: Specified port ('+ PORT +') is already in use');
       log('ADVICE: Next available port is ' + assignedPort + ' please retry the server with same');
