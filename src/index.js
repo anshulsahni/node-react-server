@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const portfinder = require('portfinder');
 
-const log = require('./logger');
 
 module.exports = function(options) {
   const ENV = options.env || 'development';
@@ -10,6 +9,7 @@ module.exports = function(options) {
   const APP_DIR = options.appDir || 'app';
   const RENDER_FILE = options.renderFile || 'index.html';
   const server = express();
+  const log = require('./logger')(ENV);
 
   // method to handle all the routes and re-direct to single render-file
   server.get('*', function(request, response) {
