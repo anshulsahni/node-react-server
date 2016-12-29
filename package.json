@@ -29,6 +29,9 @@
     "yargs": "^6.5.0"
   },
   "devDependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-router": "^3.0.0",
     "uglify-js": "^2.7.5"
   }
 }
