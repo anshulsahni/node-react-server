@@ -19,6 +19,8 @@ module.exports = function(options) {
       if (error && error.status == 404) {
         log('ERROR: Render file specified does not exist in the specified App directory');
         response.status(404).send('App is in still development mode');
+      } else {
+        log('SUCCESS: Rendered ' + request.originalUrl + ' from host: ' + request.hostname + ':' + PORT);
       }
     });
   });
