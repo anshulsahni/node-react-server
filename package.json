@@ -2,7 +2,7 @@
   "name": "node-server-for-react",
   "version": "0.0.1",
   "description": "A node server for react application",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -33,5 +33,11 @@
     "react-dom": "^15.4.1",
     "react-router": "^3.0.0",
     "uglify-js": "^2.7.5"
-  }
+  },
+  "files": [
+    "src/index.js",
+    "src/constants.js",
+    "src/logger.js"
+  ],
+  "bin": "src/index.js"
 }
