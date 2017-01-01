@@ -1,10 +1,11 @@
 const express = require('express');
 const path = require('path');
 const portfinder = require('portfinder');
+const constants = require('./constants.js');
 
 module.exports = function(options) {
-  const ENV = options.env || 'development';
-  const PORT = options.port || (ENV === 'development' ? 3000 : 8080);
+  const ENV = options.env || constants.DEVELOPMENT;
+  const PORT = options.port || (ENV === constants.DEVELOPMENT ? 3000 : 8080);
   const APP_DIR = options.appDir || 'app';
   const RENDER_FILE = options.renderFile || 'index.html';
   const server = express();

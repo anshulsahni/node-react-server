@@ -1,3 +1,4 @@
+const constants = require('./constants.js');
 
 const pad = function(val) {
   return (String(val).length == 1 ? '0' : '') + val;
@@ -10,7 +11,7 @@ const timestamp = function() {
 
 module.exports = function(environment) {
   return function(message) {
-    if (environment.toLowerCase() === 'development') {
+    if (environment === constants.DEVELOPMENT) {
       console.log(timestamp() + ' - ' + message);
     }
   }
