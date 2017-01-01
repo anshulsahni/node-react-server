@@ -8,9 +8,10 @@ module.exports = function(options) {
   const PORT = options.port || (ENV === constants.DEVELOPMENT ? 3000 : 8080);
   const APP_DIR = options.appDir || 'app';
   const RENDER_FILE = options.renderFile || 'index.html';
+  const LOG_FILE = options.logFile || 'react-server.log';
   const server = express();
   const app = express();
-  const log = require('./logger')(ENV);
+  const log = require('./logger')(ENV, LOG_FILE);
 
   // method to handle all the routes and re-direct to single render-file
   app.get('/', function(request, response) {
