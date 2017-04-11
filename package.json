@@ -35,9 +35,7 @@
     "uglify-js": "^2.7.5"
   },
   "files": [
-    "src/index.js",
-    "src/constants.js",
-    "src/logger.js"
+    "src"
   ],
   "bin": "src/index.js"
 }

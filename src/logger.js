@@ -1,5 +1,4 @@
 const fs = require('fs');
-const constants = require('./constants.js');
 
 const pad = function(val) {
   return (String(val).length == 1 ? '0' : '') + val;
@@ -22,12 +21,8 @@ const logIntoFile = function(message, logFile) {
   })
 };
 
-module.exports = function(environment, logFile) {
+module.exports = function(logFile) {
   return function(message) {
-    if (environment === constants.DEVELOPMENT) {
-      console.log(stampWithTime(message));
-    } else if (environment === constants.PRODUCTION) {
-      logIntoFile(stampWithTime(message), logFile);
-    }
+    logIntoFile(stampWithTime(message), logFile);
   }
 };
