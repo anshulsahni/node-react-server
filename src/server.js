@@ -15,10 +15,10 @@ module.exports = function(options) {
   const APP_DIR = options.appDir || 'app';
   const RENDER_FILE = options.renderFile || 'index.html';
   const LOG_FILE = options.logFile || 'react-server.log';
-  const logStatus = options.log;
+  const logLevel = options.logLevel || false;
   const server = express();
   const app = express();
-  const log = require('./logger')(logStatus, LOG_FILE);
+  const log = require('./logger')(logLevel, LOG_FILE);
 
   // method to handle all the routes and re-direct to single render-file
   app.get('/', function(request, response) {

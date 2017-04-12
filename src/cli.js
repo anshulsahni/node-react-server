@@ -1,4 +1,7 @@
 const yargs = require('yargs');
+const camelCase = require('lodash.camelcase');
+const mapKeys = require('lodash.mapkeys');
+
 const server = require('./server.js');
 
 const argv = yargs
@@ -11,6 +14,8 @@ const argv = yargs
               .describe('a', 'Directory name in from in which file render file resides - relative to cwd()')
               .alias('l', 'log-file')
               .describe('l', 'Log file in which logs will be recored')
+              .alias('o', 'log-level')
+              .describe('o', 'Log level, this decides the target for logs')
               .help('h')
               .alias('h', 'help')
               .describe('h', 'Show help related to react-server')
@@ -21,4 +26,5 @@ server({
   renderFile: argv['render-file'],
   appDir: argv['app-dir'],
   logFile: argv['log-file'],
+  logLevel: argv['log-level'],
 });

@@ -21,13 +21,14 @@ const logIntoFile = function(message, logFile) {
   })
 };
 
-module.exports = function(log, logFile) {
+module.exports = function(logLevel, logFile) {
   return function(message) {
-    if (log){
+    if (logLevel === 'file') {
       logIntoFile(stampWithTime(message), logFile);
-    }
-    else {
+    } else if (logLevel === 'screen') {
       console.log(stampWithTime(message));
+    } else {
+      return;
     }
   }
 };

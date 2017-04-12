@@ -37,5 +37,5 @@
   "files": [
     "src"
   ],
-  "bin": "src/index.js"
+  "bin": "src/cli.js"
 }
