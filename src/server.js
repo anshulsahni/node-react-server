@@ -2,14 +2,23 @@ const express = require('express');
 const path = require('path');
 const portfinder = require('portfinder');
 
+/**
+ * options
+ * port: port for the server to be started
+ * appDir: directory containing the app
+ * renderFile: html file to be rendered by ther server on every routes
+ * logFile: name of log file where logs be mentioned
+ */
+
 module.exports = function(options) {
   const PORT = options.port || 8080;
   const APP_DIR = options.appDir || 'app';
   const RENDER_FILE = options.renderFile || 'index.html';
   const LOG_FILE = options.logFile || 'react-server.log';
+  const logStatus = options.log;
   const server = express();
   const app = express();
-  const log = require('./logger')(LOG_FILE);
+  const log = require('./logger')(logStatus, LOG_FILE);
 
   // method to handle all the routes and re-direct to single render-file
   app.get('/', function(request, response) {

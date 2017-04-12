@@ -21,8 +21,13 @@ const logIntoFile = function(message, logFile) {
   })
 };
 
-module.exports = function(logFile) {
+module.exports = function(log, logFile) {
   return function(message) {
-    logIntoFile(stampWithTime(message), logFile);
+    if (log){
+      logIntoFile(stampWithTime(message), logFile);
+    }
+    else {
+      console.log(stampWithTime(message));
+    }
   }
 };
