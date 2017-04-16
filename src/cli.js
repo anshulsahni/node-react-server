@@ -1,6 +1,4 @@
 const yargs = require('yargs');
-const camelCase = require('lodash.camelcase');
-const mapKeys = require('lodash.mapkeys');
 
 const server = require('./server.js');
 
