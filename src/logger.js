@@ -14,7 +14,7 @@ const stampWithTime = function(message) {
 };
 
 const logIntoFile = function(message, logFile) {
-  fs.appendFile(logFile, message, function(error) {
+  fs.appendFile(logFile, `${message}\n`, function(error) {
     if (error) {
       console.log(stampWithTime('ERROR: Writing to log file operation failed'));
     }
