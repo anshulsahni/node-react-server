@@ -26,7 +26,7 @@
   "dependencies": {
     "express": "^4.14.0",
     "portfinder": "^1.0.10",
-    "yargs": "^6.5.0"
+    "yargs": "^6.6.0"
   },
   "devDependencies": {
     "react": "^15.4.1",
@@ -35,9 +35,7 @@
     "uglify-js": "^2.7.5"
   },
   "files": [
-    "src/index.js",
-    "src/constants.js",
-    "src/logger.js"
+    "src"
   ],
-  "bin": "src/index.js"
+  "bin": "src/cli.js"
 }

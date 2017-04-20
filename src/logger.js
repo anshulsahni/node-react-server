@@ -1,5 +1,4 @@
 const fs = require('fs');
-const constants = require('./constants.js');
 
 const pad = function(val) {
   return (String(val).length == 1 ? '0' : '') + val;
@@ -15,19 +14,21 @@ const stampWithTime = function(message) {
 };
 
 const logIntoFile = function(message, logFile) {
-  fs.appendFile(logFile, message, function(error) {
+  fs.appendFile(logFile, `${message}\n`, function(error) {
     if (error) {
       console.log(stampWithTime('ERROR: Writing to log file operation failed'));
     }
   })
 };
 
-module.exports = function(environment, logFile) {
+module.exports = function(logLevel, logFile) {
   return function(message) {
-    if (environment === constants.DEVELOPMENT) {
-      console.log(stampWithTime(message));
-    } else if (environment === constants.PRODUCTION) {
+    if (logLevel === 'file') {
       logIntoFile(stampWithTime(message), logFile);
+    } else if (logLevel === 'screen') {
+      console.log(stampWithTime(message));
+    } else {
+      return;
     }
   }
 };
