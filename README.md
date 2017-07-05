@@ -1,0 +1,2 @@
+# NodeServerForReact
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/747b991b08ad49c8b4f4913086cdb44c)](https://www.codacy.com/app/anshulsahni/NodeServerForReact?utm_source=github.com&utm_medium=referral&utm_content=anshulsahni/NodeServerForReact&utm_campaign=badger)
